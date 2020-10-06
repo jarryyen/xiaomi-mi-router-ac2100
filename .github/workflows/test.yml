@@ -18,11 +18,11 @@ jobs:
     - name: make test file
       run: |
         mkdir test
-        echo 'Hello World' > /test/TEST_FILE
-        echo "FILE_NAME=_$(cat /test/TEST_FILE)" >> $GITHUB_ENV
+        echo 'Hello World' > test/TEST_FILE
+        echo "FILE_NAME=_$(cat test/TEST_FILE)" >> $GITHUB_ENV
     
     - name: upload artifact
       uses: actions/upload-artifact@main
       with:
         name: $FILE_NAME
-        path: /test/TEST_FILE
+        path: test/TEST_FILE
