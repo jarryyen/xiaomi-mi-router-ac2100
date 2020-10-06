@@ -1,7 +1,8 @@
 name: Test Env
 
-watch:
-  types: started
+on:
+  watch:
+    types: started
   
 env:
   TEST_STR: "global test string"
