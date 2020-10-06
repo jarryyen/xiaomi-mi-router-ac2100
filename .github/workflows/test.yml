@@ -24,8 +24,6 @@ jobs:
     - name: test env string
       run: |
         echo $FILE_NAME
-        echo ${ FILE_NAME }
-        echo ${{ FILE_NAME }}
     
     - name: upload artifact
       uses: actions/upload-artifact@main
