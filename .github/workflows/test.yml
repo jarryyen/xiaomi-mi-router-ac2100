@@ -28,5 +28,5 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@main
       with:
-        name: ${FILE_NAME}
+        name: ${{ FILE_NAME }}
         path: test/TEST_FILE
