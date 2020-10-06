@@ -20,6 +20,12 @@ jobs:
         mkdir test
         echo 'Hello World' > test/TEST_FILE
         echo "FILE_NAME=_$(cat test/TEST_FILE)" >> $GITHUB_ENV
+        
+    - name: test env string
+      run: |
+        echo $FILE_NAME
+        echo ${ FILE_NAME }
+        echo ${{ FILE_NAME }}
     
     - name: upload artifact
       uses: actions/upload-artifact@main
